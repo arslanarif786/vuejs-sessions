@@ -1,9 +1,11 @@
 <script setup>
-import GrandParent from './components/GrandParent.vue'
+// import GrandParent from './components/GrandParent.vue'
+import ComputedConcept from "./components/ComputedConcept.vue"
 </script>
 
 <template>
-  <GrandParent />
+  <ComputedConcept />
+  <!-- <GrandParent /> -->
 </template>
 
 <style scoped>

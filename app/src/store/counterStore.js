@@ -21,6 +21,8 @@ export const useCounterStore = defineStore('counter', () => {
 
     const count = ref(0)
     const name = ref('Bojan')
+    const of3Count = ref(0)
+    const of5Count = ref(0)
 
      //const doubleCount = computed(() => count.value * 2)
 
@@ -36,15 +38,15 @@ export const useCounterStore = defineStore('counter', () => {
 
     // make the table of 3
     const theTableOf3 = () => {
-      count.value = count.value + 3
-      console.log('the table of 3 count--->', count.value)    
+      of3Count.value = of3Count.value + 3
+      console.log('the table of 3 count--->', of3Count.value)    
     }
 
     // make the table of 5
     const theTableOf5 = () => {
-      count.value = count.value + 5
-      console.log('the table of 5 count--->', count.value)
+      of5Count.value = of5Count.value + 5
+      console.log('the table of 5 count--->', of5Count.value)
     }
-    return { count, name, increment, doubleIncrement, theTableOf3, theTableOf5 }
+    return { count, of3Count, of5Count, name, increment, doubleIncrement, theTableOf3, theTableOf5 }
   
   })

@@ -34,13 +34,15 @@ const { grandParentData } = inject("data")
         <div class="card-body">
           <h5 class="card-title">Provide/Inject</h5>
           <p class="card-text">{{ grandParentData }}</p>
-          <h5 class="card-title">Store Counter</h5>
-          <p class="card-text">{{ counterStore.count }}</p>
+          <h5 class="card-title">Store Counter The Table Of 3</h5>
+          <p class="card-text">{{ counterStore.of3Count }}</p>
+          <h5 class="card-title">Store Counter The Table Of 5</h5>
+          <p class="card-text">{{ counterStore.of5Count }}</p>
         </div>
       </div>
     </div>
   </div>
-  <button @click="counterStore.theTableOf3"> Parent Button Table of 3 </button>
-  <button @click="counterStore.theTableOf5"> Parent Button Table of 5 </button>
+  <button @click="counterStore.theTableOf3"> <strong>Parent Button Table Of 3</strong> {{ counterStore.of3Count }}</button>
+  <button @click="counterStore.theTableOf5"> <strong>Parent Button Table Of 5</strong> {{ counterStore.of5Count }}</button>
 </div>
 </template>

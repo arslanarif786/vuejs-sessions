@@ -1,13 +1,15 @@
 <script setup>
-// import GrandParent from './components/GrandParent.vue'
-import ComputedConcept from "./components/ComputedConcept.vue"
-import WatcherConcept from "./components/WatcherConcept.vue"
+import ComputedFunction from './components/ComputedFunction.vue';
+//import GrandParent from './components/GrandParent.vue'
+//import ComputedConcept from "./components/ComputedConcept.vue"
+//import WatcherConcept from "./components/WatcherConcept.vue"
 </script>
 
 <template>
-  <ComputedConcept />
-  <WatcherConcept />
+ <!-- <ComputedConcept /> -->
+ <!-- <WatcherConcept /> -->
   <!-- <GrandParent /> -->
+  <ComputedFunction />
 </template>
 
 <style scoped>

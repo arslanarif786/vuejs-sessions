@@ -4,10 +4,21 @@
 //import ComputedConcept from "./components/ComputedConcept.vue"
 // import WatcherConcept from "./components/WatcherConcept.vue"
 import DataBindingTask from "./components/DataBindingTask.vue"
-import WatcherTask from "./components/WatcherTask.vue"
+import StyledButton from "./components/StyledButton.vue";
+// import WatcherTask from "./components/WatcherTask.vue"
 </script>
 
 <template>
  <div><DataBindingTask /></div>
- <div><WatcherTask /></div>
+ 
+ <!-- slots concept -->
+ <div>
+    <!-- i am passing name of the button which is HTML from parent template to child template named 'StyleButton' -->
+    <StyledButton @button-clicked="firstFunction"> first </StyledButton>
+
+    <StyledButton @button-clicked="secondFunction"> second </StyledButton>
+    
+    <StyledButton @button-clicked="thirdFunction"> third </StyledButton>
+ </div>
+ <!-- <div><WatcherTask /></div> -->
 </template>

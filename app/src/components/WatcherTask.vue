@@ -23,12 +23,11 @@
   
   <script setup>
   import { ref, watch } from 'vue';
-  
   const boolean1 = ref(false);
   const boolean2 = ref(true);
   
-  const person = ref({ name: 'John Doe', age: 25, city: 'Example City' });
-  const newPerson = ref({ name: '', age: null, city: '' });
+  const person = ref({ name: 'John Doe', age: 25, city: 'Example City' })
+  const newPerson = ref({ name: '', age: null, city: '' })
   
   const toggleBoolean = () => {
     boolean1.value = !boolean1.value;
@@ -44,17 +43,12 @@
     person.value.city = newPerson.value.city;
   };
   
-  watch(boolean1, (newValue, oldValue) => {
-    console.log(`Boolean 1 changed from ${oldValue} to ${newValue}`);
-  });
-  
-  watch(boolean2, (newValue, oldValue) => {
-    console.log(`Boolean 2 changed from ${oldValue} to ${newValue}`);
-  });
-  
-  watch(person, (newValue, oldValue) => {
-    console.log('Person object changed:', oldValue, '->', newValue);
-  }, { deep: true });
+  watch([boolean1, boolean2, person], ([newBoolean1, newBoolean2, newPersonValue]) => {
+    // console.log('newProps---->', newProps)
+    console.log(`Boolean 1 changed to ${newBoolean1}`);
+    console.log(`Boolean 2 changed to ${newBoolean2}`);
+    console.log('Person object changed to', newPersonValue);
+  },{ deep: true })
   
   </script>
   

@@ -34,7 +34,7 @@ const grandParentData = ref([
 provide("data", { grandParentData })
 </script>
 <template>
-  <button @click="counterStore.tableOfThree"> table of 3 </button>
+  <!-- <button @click="counterStore.tableOfThree"> table of 3 </button> -->
   
   <ParentFile />
 </template>

@@ -1,11 +1,11 @@
 <script setup>
-// import GrandChild from "./GrandChild.vue"
+import GrandChild from "./GrandChild.vue"
 const props = defineProps({
   authorData: Object
 })
 
 </script>
 <template>
-  <!-- <GrandChild /> -->
-  {{ authorData }}
+  <GrandChild />
+  <!-- {{ authorData }} -->
 </template>

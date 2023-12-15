@@ -18,6 +18,8 @@ const { grandParentData } = inject("data")
         <li v-for="item in grandParentData" :key="item.name" class="nav-item" >
           <a class="nav-link" href="#">{{ item.name }}</a>
         </li>
+        <li class="nav-item"><RouterLink to="/login">Login</RouterLink></li>
+        <li class="nav-item"><RouterLink to="/registration">Registration</RouterLink></li>
       </ul>
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -26,7 +28,7 @@ const { grandParentData } = inject("data")
     </div>
   </div>
 </nav>
-<div class="container-fluid mt-5 pt-5">
+<!-- <div class="container-fluid mt-5 pt-5">
   <div class="row">
     <div class="col-12">
       <h1>Data Printing</h1>
@@ -44,5 +46,6 @@ const { grandParentData } = inject("data")
   </div>
   <button @click="counterStore.theTableOf3"> <strong>Parent Button Table Of 3</strong> {{ counterStore.of3Count }}</button>
   <button @click="counterStore.theTableOf5"> <strong>Parent Button Table Of 5</strong> {{ counterStore.of5Count }}</button>
-</div>
+</div> -->
+<RouterView />
 </template>

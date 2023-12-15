@@ -34,6 +34,7 @@
                 <TextBelowField>Please note that the password must match the previously entered password.</TextBelowField>
             </div>
             <StyledButtonFormTask @pass-message-to-parent="messageFunction">Submit</StyledButtonFormTask> 
+            <span>You have an account no problem? <RouterLink to="/login">visit the Login link</RouterLink></span>
         </form>
         </div>
     </div>

@@ -1,6 +1,7 @@
 <script setup>
-import ParentFile from "./ParentFile.vue"
+// import ParentFile from "./ParentFile.vue"
 import { onMounted, provide, ref } from "vue"
+import Child2 from './Child2.vue'
 import { useCounterStore } from '@/store/counterStore'
 
 const counterStore = useCounterStore()
@@ -32,9 +33,52 @@ const grandParentData = ref([
   },
 ])
 provide("data", { grandParentData })
+
+const studentData = ref([
+  {
+    name: 'john',
+    age: '20',
+    class: '10'
+  },
+  {
+    name: 'Mike',
+    age: '22',
+    class: '10'
+  },
+  {
+    name: 'Ellie',
+    age: '20',
+    class: '10'
+  },
+  {
+    name: 'Mikle',
+    age: '19',
+    class: '10'
+  },
+  {
+    name: 'Watson',
+    age: '21',
+    class: '10'
+  },
+])
+
+const toggleTeleport = ref(false)
 </script>
+
 <template>
   <!-- <button @click="counterStore.tableOfThree"> table of 3 </button> -->
+
+  <!-- Teleport Concept -->
+
+  <!-- // portals // react -->
+  <Teleport to="#modals">
+      <div class="third-div">
+        <p>Hello from Teleport</p>
+      </div>
+  </Teleport>
+
+  <!-- v-for loop on child to render the dynamic component into the DOM -->
+  <Child2 :prop-data="student" v-for="student in studentData" :key="student" />
   
-  <ParentFile />
+  <!-- <ParentFile /> -->
 </template>

@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
-import FirstTask from './components/FirstTask.vue';
+import FirstTask from './components/FirstTask.vue'
+import SecondTask from './components/SecondTask.vue'
 </script>
 
 <template>
@@ -16,6 +17,7 @@ import FirstTask from './components/FirstTask.vue';
   <main>
     <TheWelcome />
     <FirstTask />
+    <SecondTask />
   </main>
 </template>
 
